@@ -38,7 +38,7 @@ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 
 Figure1. architecture of our example program
 
-Make sure that your $GOPATH/bin is in your $PATH.
+Make sure that your ```$GOPATH/bin``` is in your ```$PATH```.
 
 ### 2.1 Define your service in gRPC
 
@@ -240,7 +240,7 @@ func main() {
 
 ### 2.4 Try it out!
 
- To compile and run the server, assuming you are in the folder$GOPATH/src/github.com/go-grpc-tutorial, simply:
+ To compile and run the server, assuming you are in the folder ```$GOPATH/src/github.com/go-grpc-tutorial```, simply:
 ```bash
  $ go run server/server.go
  ```
@@ -261,13 +261,13 @@ Call REST API
 ```
 
 
-## Source code
+## 3. Source code
 
 
 Download the entire example from https://github.com/phuongdo/go-grpc-tutorial, then copy it
-to $GOPATH/src/github.com/go-grpc-tutorial
+to ```$GOPATH/src/github.com/go-grpc-tutorial```
 
-## Further reading
+## 4. Further reading
 
 * gRPC quickstart (http://www.grpc.io/docs/quickstart/go.html)
 * gRPC advance (http://www.grpc.io/docs/tutorials/basic/go.html#generating-client-and-server-code)
