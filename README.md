@@ -21,8 +21,8 @@ Requires that GOPATH is set
 $ go help gopath
 $ # ensure the PATH contains $GOPATH/bin
 $ export PATH=$PATH:$GOPATH/bin
-// for fish guy :)
-// set -gx PATH $PATH $GOPATH/bin
+# for fish guy :)
+# set -gx PATH $PATH $GOPATH/bin
 ```
 Then, go get -u as usual.
 
@@ -34,17 +34,11 @@ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 
 ## 2. Guidelines
 
-
-
 ![architecture introduction diagram](images/fig1.png)
 
 Figure1. architecture of our example program
 
-
-
 Make sure that your $GOPATH/bin is in your $PATH.
-
-
 
 ### 2.1 Define your service in gRPC
 
@@ -81,7 +75,6 @@ service EchoService {
 }
 ```
 
-
 ### 2.2 Gnerate gRPC stub
 
 Generating client and server code
@@ -93,7 +86,7 @@ $ protoc -I/usr/local/include -I. \
   pb/service.proto
 ```
 
-Generate reverse-proxy
+Generate reverse-proxy for your RESTful API
 ```bash
 $ protoc -I/usr/local/include -I. \
    -I$GOPATH/src \
@@ -101,8 +94,6 @@ $ protoc -I/usr/local/include -I. \
    --grpc-gateway_out=logtostderr=true:. \
    pb/service.proto
 ```
-
-
 
 ### 2.3 Write your Server code
 
@@ -156,7 +147,7 @@ func main() {
 ```
 
 
-server/server-rproxy.go: (return REST JSON API)
+server/server-rproxy.go: (REST JSON API)
 
 ```golang
 package main
@@ -247,7 +238,7 @@ func main() {
 ```
 
 
- ### Try it out!
+### 2.4 Try it out!
 
  To compile and run the server, assuming you are in the folder$GOPATH/src/github.com/go-grpc-tutorial, simply:
 ```bash
@@ -276,7 +267,7 @@ Call REST API
 Download the entire example from https://github.com/phuongdo/go-grpc-tutorial, then copy it
 to $GOPATH/src/github.com/go-grpc-tutorial
 
-##Futher reading
+## Further reading
 
 * gRPC quickstart (http://www.grpc.io/docs/quickstart/go.html)
 * gRPC advance (http://www.grpc.io/docs/tutorials/basic/go.html#generating-client-and-server-code)
