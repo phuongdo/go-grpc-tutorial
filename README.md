@@ -82,7 +82,7 @@ Generating client and server code
 $ protoc -I/usr/local/include -I. \
   -I$GOPATH/src \
  -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
- --go_out=Mgoogle/api/annotations.proto=github.com/gengo/grpc-gateway/third_party/googleapis/google/api,plugins=grpc:. \
+ --go_out=google/api/annotations.proto=github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis/google/api,plugins=grpc:. \
   pb/service.proto
 ```
 
@@ -245,9 +245,16 @@ func main() {
  $ go run server/server.go
  ```
 
- Likewise, to run the client:
+ Likewise, to run the client, in a new shell:
 ```bash
  $ go run client/client.go
+
+ 017/03/06 17:36:33 Greeting: PhuongDV
+```
+
+You can also run the proxy in a new shell:
+```bash
+ $ go run server/server-rproxy.go
 
  017/03/06 17:36:33 Greeting: PhuongDV
 ```
