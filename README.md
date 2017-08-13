@@ -6,7 +6,7 @@ This tutorial provides a basic Go programmer's introduction to working with gRPC
 * Generate server and client code using the protocol buffer compiler.
 * Use the Go gRPC API to write a simple client and server for your service.
 
-## 1. Perquisites
+## 1. Prerequisites
 
 This requires Go 1.6 or later, ProtocolBuffers 3.0.0 or later
 
@@ -75,7 +75,7 @@ service EchoService {
 }
 ```
 
-### 2.2 Gnerate gRPC stub
+### 2.2 Generate gRPC stub
 
 Generating client and server code
 ```bash
