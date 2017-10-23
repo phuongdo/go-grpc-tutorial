@@ -81,8 +81,8 @@ Generating client and server code
 ```bash
 $ protoc -I/usr/local/include -I. \
   -I$GOPATH/src \
- -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
- --go_out=google/api/annotations.proto=github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis/google/api,plugins=grpc:. \
+  -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+  --go_out=plugins=grpc:. \
   pb/service.proto
 ```
 
